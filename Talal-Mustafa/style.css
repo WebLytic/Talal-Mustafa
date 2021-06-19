@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Monoton&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/********** Font Family ***************/
+@font-face {
+  font-family: "osande-thin";
+  src: url(fonts/Osande-Thin.otf);
+}
+
+/********** Main Section For Background Images ************/
+#main {
+  z-index: 1000;
+  height: 100vh;
+  width: 100%;
+  background-image: url(images/bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 3s;
+  animation: animate;
+  animation-direction: alternate-reverse;
+  animation-duration: 9s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    background-image: url(images/img.jpg);
+  }
+  50% {
+    background-image: url(images/img11.jpg);
+  }
+  100% {
+    background-image: url(images/img9.jpg);
+  }
+  /* 60% {
+    background-image: url(images/img3.jpg);
+  }
+  80% {
+    background-image: url(images/img3.jpg);
+  }
+  100% {
+    background-image: url(images/img3.jpg);
+  } */
+}
+
+/**************** Logo & Nav Div **********/
+#nav-logo {
+  position: relative;
+}
+/**************** Container for Main **********/
+.container-1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  position: relative;
+  top: 40px;
+}
+/**************** Logo **********/
+#logo {
+  position: fixed;
+  font-family: "Monoton", cursive;
+  letter-spacing: 5px;
+  font-size: 40px;
+  padding-top: 30px;
+  padding-left: 40px;
+  color: #26cc74;
+  text-shadow: 0 0 20px #26cc74;
+}
+/**************** Nav **********/
+.navigation-wrapper {
+  position: relative;
+}
+.navigation-button {
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1;
+  top: 40px;
+  right: 40px;
+  background: transparent;
+  cursor: pointer;
+}
+.navigation-button .fa {
+  border: 2px solid #26cc74;
+  border-radius: 11px 2px 11px 2px;
+  padding: 10px;
+  color: white;
+  text-shadow: 0 0 10px #26cc74;
+  box-shadow: 0 0 10px #26cc74;
+}
+.navigation-button .fa:hover {
+  color: white;
+  background-color: #26cc74;
+  transition: 0.4s ease-in-out;
+}
+.navigation-menu ul li {
+  list-style: none;
+  font-family: impact;
+  font-weight: 300;
+  color: hsl(0, 0%, 70%);
+}
+
+.navigation-menu {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  transform: skewX(0deg) translate(100%, 0);
+  transform-origin: top right;
+  transition: all 0.2s ease-in;
+  z-index: 1;
+  background: linear-gradient(
+    -45deg,
+    #020d775e,
+    #1f035f4b,
+    #26cc738c,
+    rgba(92, 92, 23, 0.295)
+  );
+  background-size: 400%;
+  animation: change 10s ease-in-out infinite alternate;
+}
+@keyframes change {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.navigation-menu ul {
+  transform: skewX(-8deg);
+  transform-origin: top left;
+  position: fixed;
+  right: 10%;
+  top: 120px;
+  width: 400px;
+  text-align: right;
+}
+.navigation-menu ul li {
+  position: relative;
+  z-index: 999;
+  font-size: 32px;
+  color: hsl(0, 0%, 10%);
+  line-height: 64px;
+}
+.navigation-menu ul li a {
+  border: none;
+  color: white;
+  text-shadow: 0 0 20px #26cc74;
+  text-decoration: none;
+}
+.navigation-menu.active {
+  transform: skewX(8deg) translate(0, 0);
+}
+
+.navigation-menu li {
+  opacity: 0;
+  transform: translate(0, 10px);
+  transition: all 0s ease-in 0.3s;
+}
+.navigation-menu.active li {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 0.2s ease-in 0s;
+}
+.navigation-menu.active li:nth-child(1) {
+  transition-delay: 0.3s;
+}
+.navigation-menu.active li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.navigation-menu.active li:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.navigation-menu.active li:nth-child(4) {
+  transition-delay: 0.6s;
+}
+.navigation-menu.active li:nth-child(5) {
+  transition-delay: 0.7s;
+}
+.navigation-menu.active li:nth-child(6) {
+  transition-delay: 0.8s;
+}
+
+/**************** Main Content **********/
+.hero {
+  /* position: relative; */
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .hero img {
+  width: 150px;
+  height: 50px;
+  margin-left: 45%; */
+  /* margin-top: -20px; */
+
+
+.hero h1 {
+  font-family: "Gloria Hallelujah", cursive !important;
+  font-family: "Monoton", cursive;
+  font-style: italic;
+  position: relative;
+  text-align: center;
+  font-family: impact;
+  font-size: 35px;
+  color: white;
+  /* margin-top: 50px; */
+}
+
+.hero h2 {
+  text-align: center;
+  font-size: 20vw;
+  /* padding-top: 5%; */
+  letter-spacing: 2px;
+  font-family: impact;
+  background: -webkit-linear-gradient(-75deg, purple, green, #26cc74, purple);
+  text-shadow: 1 1 20px #26cc74;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: -30px; */
+  width: 50%;
+}
+.btn1 {
+  text-align: center;
+  /* position: fixed; */
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  margin-top: 30px;
+  /* left: 45%; */
+  background-color: transparent;
+  padding: 12px 25px;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #26cc74;
+  border-radius: 5px 30px;
+  text-shadow: 0 0 20px #26cc74;
+  box-shadow: 0 0 20px #26cc74;
+}
+.btn1:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #26cc74;
+  transition: 0.4s ease-in-out;
+}
+.hero i{
+  margin-left: 20px;
+}
+/****************** Preloader **************/
+#preloader {
+  background: #000 url(images/preloader.gif) no-repeat center center;
+  background-size: 25%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+/**************** Media Queries **********/
+@media only screen and (max-width: 1500px) {
+  .hero p {
+    margin-top: 0%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .btn1 {
+    left: 40%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navigation-menu ul li {
+    font-size: 17px;
+    line-height: 40px;
+  }
+  .navigation-menu ul {
+    right: 20%;
+    top: 70px;
+  }
+  #logo {
+    letter-spacing: 1px;
+    font-size: 40px;
+    padding-top: 5px;
+    padding-left: 5px;
+  }
+  .navigation-button {
+    top: 17px;
+    right: 10px;
+  }
+  .hero h1 {
+    font-size: 35px;
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    text-align: left;
+    font-size: 25vw;
+    padding-top: 30%;
+    letter-spacing: 2px;
+  }
+  .hero p {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 0px;
+    width: 100%;
+  }
+  .btn1 {
+    font-size: 18px;
+    margin-top: 40px;
+    left: 10%;
+    padding: 10px 20px;
+  }
+}
+@media only screen and (min-height: 850px) {
+  .hero h2 {
+    padding-top: 10%;
+  }
+}
+/* @media only screen and (max-width: 375px) {
+  .hero h2 {
+    padding-top: 30% !important;
+  }
+} */
+/* @media only screen and (max-width: 320px) {
+  .hero h2 {
+    padding-top: 20% !important;
+  }
+} */
