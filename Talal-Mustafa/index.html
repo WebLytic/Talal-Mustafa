@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talal Mustafa | Web Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/smooth-scroll.js" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!---- Preloader ---->
+    <div id="preloader"></div>
+    <!---- Main Div ---->
+    <section id="main">
+      <!---- Logo ---->
+      <section id="nav-logo">
+        <a href="#"> <div id="logo">TM</div></a>
+        <!---- Nav ---->
+        <div class="navigation-wrapper">
+          <div class="navigation-button">
+            <i class="fa fa-bars"></i>
+          </div>
+          <div class="navigation-menu">
+            <ul>
+              <li><a href="">HOME</a></li>
+              <li><a href="">GALLERY</a></li>
+              <li><a href="">CONTACT</a></li>
+              <li><a href="">LOCATION</a></li>
+              <li><a href="">TESTIMONIAL</a></li>
+              <li><a href="">PRICING</a></li>
+            </ul>
+          </div>
+          <!---- Preloader Video ---->
+          <iframe
+            width="0"
+            height="0"
+            src="https://www.youtube.com/embed/23w35886kDU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="0"
+            height="0"
+            src="https://www.youtube.com/embed/23w35886kDU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <!---- Main Content ---->
+      <section class="hero">
+        <div class="container-1 hero__content">
+          <!-- <h1>Talal</h1> -->
+          <h2>HELLO</h2>
+          <p>
+            My name is Talal. I’m a hard working and dedicated professional
+            Front-End Developer with a keen eye for detail, and a determination
+            to deliver the very highest quality. I take great pride in my work,
+            and I always try to better myself with every project I work on.
+          </p>
+          <a href="#" class="btn1">All About Me <i class="fas fa-angle-double-right"></i></a>
+        </div>
+      </section>
+    </section>
+
+    <script>
+      var navButton = document.querySelector(".navigation-button");
+      var navMenu = document.querySelector(".navigation-menu");
+      var win = window;
+
+      function openMenu(event) {
+        navButton.classList.toggle("active");
+        navMenu.classList.toggle("active");
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+      }
+
+      function closeMenu(event) {
+        if (navButton.classList.contains("active")) {
+          navButton.classList.remove("active");
+          navMenu.classList.remove("active");
+        }
+      }
+      navButton.addEventListener("click", openMenu, false);
+
+      win.addEventListener("click", closeMenu, false);
+    </script>
+
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
